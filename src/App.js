@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
-import Budget from "./components/budget/budget";
-import "./App.css";
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import Budget from './components/budget/budget';
+import Makeithappennav from './components/navbar/navbar';
+import './App.css';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <Row>
           <Col>
             <div>
+              <Makeithappennav />
               <Budget />
             </div>
           </Col>

@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import { Button } from "reactstrap";
-import Income from "./income";
-import Expenses from "./expenses";
+import React, { Component } from 'react';
+import { Button } from 'reactstrap';
+import BudgetSetup from './budgetSetup';
+import Expenses from './expenses';
 
 class Budget extends Component {
   render() {
     return (
       <div>
-        <Income />
-        <Expenses />
+        <BudgetSetup />
         <Button>Set Up Budget</Button>
       </div>
     );
