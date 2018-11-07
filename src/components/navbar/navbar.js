@@ -1,5 +1,5 @@
-import React from 'react';
-import './navbar.css';
+import React from "react";
+import "./navbar.css";
 import {
   Collapse,
   Navbar,
@@ -8,9 +8,10 @@ import {
   Nav,
   NavItem,
   NavLink
-} from 'reactstrap';
+} from "reactstrap";
 
 export default class Makeithappennav extends React.Component {
+  /*   
   constructor(props) {
     super(props);
 
@@ -18,12 +19,32 @@ export default class Makeithappennav extends React.Component {
     this.state = {
       isOpen: false
     };
-  }
-  toggle() {
+  } 
+  */
+
+  // This line replaces the constructor above and is the new ES6 syntax.
+  state = {};
+
+  // I could have initialized state above, but lets get in the habit of setting state on mount.
+  componentDidMount = () => {
+    this.state = {
+      isOpen: false
+    };
+  };
+
+  /* toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  } */
+
+  // In using the new ES6 syntax, we replace the above with an arrow function which is a requirement is lieu of the binding done in the constructor
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
   render() {
     return (
       <div>
